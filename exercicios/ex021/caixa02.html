@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lightslategrey;
+            margin: 0px;
+        }
+
+        header {
+            background-color: white;
+            padding:  10px;
+            margin: 10px;
+            box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.274);
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.274);
+        }
+
+        nav {
+            background-color: rgb(25, 93, 116);
+            padding: 5px;
+            box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.274);
+        }
+
+        nav > a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 50px;
+        }
+
+        nav > a:hover {
+            color: cyan;
+            text-decoration: underline;
+        }
+
+        main {
+            background-color: white;
+            padding:  10px;
+            margin: 10px;
+            box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.274);
+            border-radius: 10px;
+        }
+
+        article {
+            background-color: lightskyblue;
+            padding: 3px;
+            box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.274);
+        }
+
+        article > h2 {
+            color: rgb(0, 255, 0);
+            text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.274);
+        }
+        article > aside {
+            background-color: rgb(106, 165, 202);
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 5px;
+            margin: 0px;
+        }
+        
+        footer > p {
+            margin: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu Site</h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+    <main>
+        <section id="assuntos">
+
+        </section>
+        <section id="noticias">
+            <article>
+                    <h2>Nóticias Urgentes</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nihil ea iste non, voluptates id itaque, reprehenderit cum accusantium quasi, debitis reiciendis laudantium amet sunt aliquam ab atque eligendi earum?</p>
+                    <aside>
+                        <p>artigo esccrito por anny</p>
+                    </aside>
+            </article>
+            <article></article>
+
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Thiago Luza</p>
+    </footer>
+</body>
+</html>

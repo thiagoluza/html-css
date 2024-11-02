@@ -11,29 +11,88 @@
 
         table {
             border-collapse: collapse;
-            width: 300px;
-            height: 300px;
+            width: 700px;
+        }
+
+        caption {
+            font-size: 1.3em;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
         }
 
         td {
-            border: 1px solid black;
-            text-align: center;
+            text-align: left;
+        }
+
+        th {
+            background-color: darkred;
+            color: white;
+        }
+
+        .cab {
+            background-color:rgb(0, 111, 180);
+            font-weight: bold;
+            color: white;
+        }
+
+        .cont {
+            text-align: left;
+        }
+
+        .grupo {
+            background-color: lightgray;
+            color: black;
         }
     </style>
 </head>
 <body>
-    <h1>Mesclagem de Células</h1>
-    <table>
+    <h1>Desafio 1</h1>
+    <table style="width: 300px; height: 300px;">
         <tr>
-            <td>A</td>
-            <td colspan="2">C</td>
+            <td>1</td>
+            <td>2</td>
+            <td rowspan="2">3</td>
+            <td>4</td>
         </tr>
         <tr>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td colspan="3">8</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td rowspan="2">10</td>
+            <td colspan="2">11</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+        </tr>
+    </table>
+    <h1>Desafio 2</h1>
+    <table style="width: 300px; height: 300px;">
+        <tr>
+            <td colspan="4">A</td>
+            <td rowspan="4">B</td>
+        </tr>
+        <tr>
+            <td rowspan="4">C</td>
             <td>D</td>
             <td>E</td>
-            <td rowspan="2">F</td>
+            <td>F</td>
         </tr>
         <tr>
+            <td>G</td>
             <td>H</td>
             <td>I</td>
         </tr>
@@ -42,6 +101,107 @@
             <td>K</td>
             <td>L</td>
         </tr>
+        <tr>
+            <td colspan="4">M</td>
+        </tr>
+    </table>
+    <h1>Desafio 3</h1>
+    <table id="filmes">
+        <tr class="cab">
+            <th>Grupo</th>
+            <th>Nomes</th>
+            <th colspan="3">Filmes</th>
+        </tr>
+        <tr>
+            <td rowspan="3">Mulheres</td>
+            <td>Pantera</td>
+            <td>Alien</td>
+            <td>Rambo</td>
+            <td>Vingadores</td>
+        </tr>
+        <tr>
+            <td>Cacau</td>
+            <td>Hulk</td>
+            <td>Inception</td>
+            <td>Batman</td>
+        </tr>
+        <tr>
+            <td>Café</td>
+            <td>Obvlion</td>
+            <td>Matrix</td>
+            <td>Big Hero</td>
+        </tr>
+        <tr>
+            <td rowspan="3">Homens</td>
+            <td>Magrão</td>
+            <td>Intocáveis</td>
+            <td>Amnésia</td>
+            <td>Gladiador</td>
+        </tr>
+        <tr>
+            <td>Apollo</td>
+            <td>Wall-e</td>
+            <td>Oldboy</td>
+            <td>Dangal</td>
+        </tr>
+        <tr>
+            <td>Luke</td>
+            <td>Star Wars 5</td>
+            <td>Taxi Driver</td>
+            <td>Toy Story</td>
+        </tr>
+    </table>
+    <table>
+        <h1>Outro Jeito pq fiz errado</h1>
+        <caption>Filmes Favoritos</caption>
+        <thead>
+            <tr>
+                <th>Grupo</th>
+                <th>Nomes</th>
+                <th colspan="3">Filmes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="3" class="grupo">Mulheres</th>
+                <td>Pantera</td>
+                <td>Alien</td>
+                <td>Rambo</td>
+                <td>Vingadores</td>
+            </tr>
+            <tr>
+                <td>Cacau</td>
+                <td>Hulk</td>
+                <td>Inception</td>
+                <td>Batman</td>
+            </tr>
+            <tr>
+                <td>Café</td>
+                <td>Obvlion</td>
+                <td>Matrix</td>
+                <td>Big Hero</td>
+            </tr>
+            <tr>
+                <th rowspan="3" class="grupo">Homens</th>
+                <td>Magrão</td>
+                <td>Intocáveis</td>
+                <td>Amnésia</td>
+                <td>Gladiador</td>
+            </tr>
+            <tr>
+                <td>Apollo</td>
+                <td>Wall-e</td>
+                <td>Oldboy</td>
+                <td>Dangal</td>
+            </tr>
+            <tr>
+
+                <td>Luke</td>
+                <td>Star Wars 5</td>
+                <td>Taxi Driver</td>
+                <td>Toy Story</td>
+            </tr>
+        </tbody>
     </table>
 </body>
 </html>

@@ -4,29 +4,186 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-image: linear-gradient(90deg, lightseagreen, darkseagreen);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p {
+            padding: 4px;
+            text-align: center;
+        }
+
+        legend {
+            font-size: 1.4em;
+            font-weight: bold;
+            padding: 0px 20px;
+            border-radius: 40px;
+            text-align: center;
+            background-color: rgb(0, 144, 192);
+            color: white;
+        }
+
+        fieldset {
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 20px;
+            width: 300px;
+            padding: 20px;
+            margin: auto;
+            background-color: white;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.377);
+        }
+
+        fieldset > p {
+            font-size: 1.3em;
+        }
+
+        .botao {
+            font-size: 1.2em;
+            border: 1px solid white;
+            background-color: lightseagreen;
+            border-radius: 10px;
+            width: 80px;
+            height: 30px;
+            transition-duration: 0.1s;
+        }
+
+        .botao:hover {
+            background-color: rgb(18, 138, 132);
+        }
+
+        .botao:active {
+            background-color: rgb(9, 110, 105);
+        }
+
+        input {
+            height: 40px;
+            border-radius: 50px;
+            border: 1px solid gray;
+            vertical-align: middle;
+            margin: auto;
+        }
+
+        input > .comida {
+            font-size: 1.3em;
+        }
+
+        #icor , #ifoto {
+            padding: 0px;
+            margin: 0px;
+            border-radius: 0px;
+            width: 100px;
+        }
+    </style>
 </head>
 <body>
     <h1>Teste</h1>
     <form action="cadastro.php" method="get">
-        <p>
-            <label for="inome">Nome</label>
-            <input type="text" name="nome" id="inome" required placeholder="Nome Completo" autocomplete="name">
-        </p>
-        <p>
-            <label for="isen">Senha</label>
-            <input type="password" name="sen" id="isen" required placeholder="Senha" autocomplete="new-password">
-        </p>
-        <p>
-            <label for="inum">Número</label>
-            <input type="number" name="num" id="inum" required  placeholder="Número de Celular" autocomplete="cc-number">
-        </p>
-        <p>
+        <fieldset> <legend>Seus Dados</legend>
+            <p>
+                <label for="inome">Nome</label>
+                <p><input type="text" name="nome" id="inome" required placeholder="  Nome Completo" autocomplete="name"></p>
+            </p>
+            <p>
+                <label for="isen">Senha</label>
+                <p><input type="password" name="sen" id="isen" required placeholder="  Senha" autocomplete="new-password"></p>
+            </p>
+            <p>
+                <label for="inum">Número</label>
+                <p><input type="tel" name="num" id="inum" required  placeholder="  (00)00000-0000" autocomplete="cc-number"></p>
+            </p>
             
-        </p>
+            <p>
+                <label for="iemail">Email:</label>
+                <p><input type="email" name="email" id="iemail" required placeholder="  Seu E-mail" autocomplete="email"></p>
+            </p>
+
+            <P>Comida Favorita</P>
+                <input class="comida" type="radio" name="comida" id="ixb"> <label for="ixb">X-bacon</label> <br>
+                <input class="comida" type="radio" name="comida" id="icu"> <label for="icu">Cuscuz</label> <br>
+
+                <p>
+                    <label for="icor">Cor</label>
+                    <input type="color" name="cor" id="icor">
+                </p>
+                <p>
+                    <label for="isat">Satisfação</label>
+                    <input type="range" name="sat" id="isat" min="0" max="10">
+                </p>
+                <p>
+                    <label for="iest">Estado</label>
+                    <select id="estado" name="iest">
+        
+                        <!-- Região Norte -->
+                        <optgroup label="Norte">
+                            <option value="AC">Acre</option>
+                            <option value="AL">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="PA">Pará</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="AP">Acre</option>
+                            <option value="TO">Tocantins</option>
+                        </optgroup>
+                
+                        <!-- Região Nordeste -->
+                        <optgroup label="Nordeste">
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio Grande do Norte</option>
+                            <option value="RN">Rio Grande do Sul</option>
+                            <option value="SE">Sergipe</option>
+                        </optgroup>
+                
+                        <!-- Região Sul -->
+                        <optgroup label="Sul">
+                            <option value="PR">Paraná</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                        </optgroup>
+                
+                        <!-- Região Centro Oeste -->
+                        <optgroup label="Centro-Oeste">
+                            <option value="DF">Distrito Federal</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MT">Mato Grosso</option>
+                        </optgroup>
+                
+                        <!-- Região Sudeste -->
+                        <optgroup label="Sudeste">
+                            <option value="ES">Espírito Santo</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="SP">São Paulo</option>
+                        </optgroup>
+                
+                        <!-- Região Sul -->
+                        <optgroup label="Sul">
+                            <option value="PR">Paraná</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                        </optgroup>
+                
+                
+                    </select>
+                </p>
+        </fieldset>  
         <p>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Limpar">
+            <input class="botao" type="submit" value="Enviar">
+            <input class="botao" type="reset" value="Limpar">
         </p>
+
     </form>
 </body>
 </html>

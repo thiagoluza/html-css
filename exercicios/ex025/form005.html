@@ -8,20 +8,22 @@
 <body>
     <h1>Exemplo Formulário</h1>
     <form action="cadastro.php" method="post" autocomplete="on">
-        <p>
-            <label for="in1">Número 1</label>
-            <input type="number" name="n1" id="in1" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        <fieldset> <legend>Soma</legend>
+            <p>
+                <label for="in1">Número 1</label>
+                <input type="number" name="n1" id="in1" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
             
-        </p>
-        <p>
-            <label for="in2">Número 2</label>
-            <input type="number" name="n2" id="in2" min="0" max="50" required
-            oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
-        </p>
-        <p>
-            <label for="isoma">Soma</label>
-            <output name="soma" id="isoma">0</output>
-        </p>
+            </p>
+            <p>
+                <label for="in2">Número 2</label>
+                <input type="number" name="n2" id="in2" min="0" max="50" required
+                oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+            </p>
+            <p>
+                <label for="isoma">Soma</label>
+                <output name="soma" id="isoma">0</output>
+            </p>
+        </fieldset>
 
         <p>
             <label for="inum">Número</label>
@@ -30,15 +32,16 @@
             <output id="ival">5</output>
         </p>
 
-        <p>
-            <label for="iano">Em que ano você nasceu</label>
-            <input type="number" name="ano" id="iano" min="1900" max="2024" 
-            oninput="resul.innerHTML = Number(2024) - Number(iano.value)">
-        </p>
-
-        <p>
-            <label for="iidade">Sua idade é:</label>
-            <output id="resul">0</output>
+        <fieldset> <legend>Idade</legend>
+            <p>
+                <label for="iano">Em que ano você nasceu</label>
+                <input type="number" name="ano" id="iano" min="1900" max="2024"
+                oninput="resul.innerHTML = Number(2024) - Number(iano.value)">
+            </p>
+            <p>
+                <label for="iidade">Sua idade é:</label>
+                <output id="resul">0</output>
+        </fieldset>
         </p>
 
         <p>

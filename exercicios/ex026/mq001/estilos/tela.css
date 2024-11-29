@@ -1,0 +1,41 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+header > h1 {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    background-color: gray;
+}
+
+nav {
+    background-color: rgb(128, 128, 128);
+}
+
+nav > a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(77, 68, 68);
+    padding: 10px 35px;
+    margin: 0px 5px;
+    border-radius: 40px;
+    transition-duration: 0.3s;
+}
+
+nav > a:hover {
+    background-color: rgb(36, 32, 32);
+}
+
+article {
+    padding: 20px;
+    margin: auto;
+    max-width: 600px;
+    line-height: 20px;
+}
